@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Salvo!</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js" integrity="sha256-XDU6Po3hKjdQXJHRrKrWlIF/E6y6BBgV5eiqZSYePpo=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-blue.min.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="styles/gameStyle.css">
+
+</head>
+<body>
+    <div id="containerGames">
+        <h1>Battleship Game</h1>
+        <div id="register">
+            <p id="currentUser" class="show"></p>
+            <label id="labelUsername" class="show">Name: <input id="username" class="show" type="email" name="username" placeholder="username@domain.com"></label>
+            <label id="labelPassword" class="show">Password: <input id="password" class="show" type="password" name="password"></label>
+            <button id="login" class="show mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" ><i class="material-icons">fingerprint</i></button>
+            <button id="newGame" class="hide" type="button">Create New Game</button>
+            <button id="logout" class="hide" type="button">Log out</button>
+            <div id="signinMessage">
+                <p>To play is needed to be registered. </p>
+                <p>Please, register NOW!!</p>
+                <button id="signin" class="show" type="button">Sign in</button>
+            </div>
+        </div>
+
+        <div id="tablesHome">
+            <div class="tablesHome2">
+                <h2>Leaderboard</h2>
+                <table id="leaderBoard">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Total</th>
+                            <th>Won</th>
+                            <th>Lost</th>
+                            <th>Tied</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableLeader"></tbody>
+                </table>
+            </div>
+            <div class="tablesHome2">
+                <h2>Games</h2>
+                <table id="tableGames">
+                    <thead>
+                    <tr>
+                        <th>Game</th>
+                        <th>Created Date</th>
+                        <th>Player1</th>
+                        <th>Player2</th>
+                    </tr>
+                    </thead>
+                    <tbody id="bodyTableGames"></tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js" integrity="sha256-XDU6Po3hKjdQXJHRrKrWlIF/E6y6BBgV5eiqZSYePpo=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <!--<script src="scripts/data.js"></script>-->
+    <script src="scripts/games.js"></script>
+
+</body>
+</html>

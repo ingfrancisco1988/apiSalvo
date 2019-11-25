@@ -1,0 +1,366 @@
+
+#containerGames{
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#container {
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+h1 {
+    margin-bottom: 25px;
+    font-size: 7rem;
+    color: #FFFFFF;
+    background: #333333;
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #5f5eff 0px 0px 20px, #5f5eff 0px 0px 30px, #5f5eff 0px 0px 40px, #5f5eff 0px 0px 50px, #5f5eff 0px 0px 75px;
+    color: #FFFFFF;
+    background: #333333;
+}
+
+#gameTitle {
+    margin-top: 0px;
+    font-size: 5rem;
+}
+
+button {
+    border-radius: 5px;
+}
+
+label {
+    margin-right: 15px;
+}
+
+#signin {
+    margin-left: 15px;
+}
+
+#tablesHome {
+    display: flex;
+    margin-top: 25px;
+    border-top: 2px solid grey;
+
+}
+
+.tablesHome2 {
+    margin-top: 25px;
+}
+
+.listStyle1 {
+    list-style: lower-roman;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+}
+
+/*Estilo grid*/
+
+table {
+    border: solid 0.2rem gray;
+    border-collapse: collapse;
+
+}
+
+thead tr {
+    border-bottom: solid 0.2rem gray;
+
+}
+thead th {
+    border-left: solid 0.1rem lightgray;
+    font-size: 1.0rem;
+}
+
+td {
+    border-bottom: solid 0.1rem lightgray;
+    border-radius: 10px;
+}
+
+.letters {
+    border-right: solid 0.2rem gray;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.column {
+    border-right: solid 0.1rem lightgray;
+}
+
+th, td {
+    width: 2.5rem;
+    height: 2.5rem;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+p {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-weight: normal;
+    color: grey;
+}
+
+#userPlayer {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+#userPlayer, #userOpponent {
+    font-size: 2rem;
+    color: #FFFFFF;
+}
+.vs {
+    font-size: 3rem;
+    color: #FFFFFF;
+}
+
+#salvosTable {
+    margin-left: 3rem;
+}
+.tables {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.tablesButtons {
+    display: flex;
+    justify-content: center;
+    width: 72%;
+}
+
+h3 {
+    text-align: center;
+}
+
+/* estilo tabla leaderBoard*/
+
+#leaderBoard th, #tableGames th {
+    width: 5rem;
+    border-left: 0;
+    border-right: 0;
+}
+#tableLeader td, #tableGames td {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 0;
+
+}
+
+#leaderBoard thead, #tableGames thead {
+    background-color:  #395870;
+    color: white;
+    border-color:  #395870;
+
+}
+#leaderBoard thead tr, #tableGames thead tr {
+    border-bottom-color: #395870;
+}
+
+#leaderBoard, #tableGames {
+    border-color:  #395870;
+    width: 90%;
+
+}
+#tableLeader tr:nth-child(even), #tableGames tr:nth-child(even){
+    background: #f0f0f2;
+}
+
+/*Estilo tabla Games*/
+
+.btnGo {
+
+    width: 50px;
+    height: 30px;
+}
+
+/* Estilo login */
+
+#login {
+
+}
+
+#currentUser{
+    display: none;
+    font-size: 2rem;
+    margin-right: 15px;
+}
+
+#logout {
+    margin-left: 10rem;
+    background-color: rgb(231, 76, 60);
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+/*Estilo drag and drop*/
+
+#aircraft {
+    width: 12.5rem;
+    height: 2.5rem;
+    background-color: forestgreen;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#battleship {
+    width: 10rem;
+    height: 2.5rem;
+    background-color: grey;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#destroyer {
+    width: 7.5rem;
+    height: 2.5rem;
+    background-color: darkgoldenrod;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#submarine {
+    width: 7.5rem;
+    height: 2.5rem;
+    background-color: coral;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#patrolboat {
+    width: 5rem;
+    height: 2.5rem;
+    background-color: crimson;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+[draggable] {
+    user-select: none;
+}
+
+#aircraft:hover, #battleship:hover, #destroyer:hover, #submarine:hover, #patrolboat:hover {
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 0 0 3px #000;
+    opacity: 0.4;
+    cursor: move;
+}
+
+#ships {
+    /*margin-left: 25px;*/
+    /*margin-top: 55px;*/
+    display: flex;
+    flex-direction: column;
+}
+
+.aircraft, .battleship, .destroyer, .submarine, .patrolboat {
+/* margin-top: 50px;*/
+}
+
+.verticalAircraft {
+   transform: rotate(90deg);
+   transform-origin: 15% 25%;
+   margin-bottom: 75px;
+   margin-top: 75px;
+}
+
+
+.verticalBattleship {
+   transform: rotate(90deg);
+   transform-origin: 20% 20%;
+   margin-bottom: 50px;
+   margin-top: 75px;
+}
+
+.verticalDestroyer, .verticalSubmarine {
+   transform: rotate(90deg);
+   transform-origin: 25% 25%;
+   margin-bottom: 25px;
+   margin-top: 75px;
+}
+
+.verticalPatrolboat {
+   transform: rotate(90deg);
+   transform-origin: 33% 33%;
+   margin-bottom: 0px;
+   margin-top: 65px;
+}
+
+.table3 {
+   margin-bottom: 25px;
+}
+
+#state {
+   font-size: 1.5rem;
+   color: grey;
+   margin-bottom: 25px;
+
+}
+
+.gameOver {
+   display: none;
+}
+
+#createShips, #createSalvo {
+   width: 100px;
+   height: 40px;
+   font-weight: bold;
+}
+
+#createShips {
+   margin-right: 65px;
+}
+
+#createSalvo {
+   margin-left: 1050px;
+}
+
+#createShips:hover, #createSalvo:hover {
+   opacity: 0.4;
+}
+
+.winLose {
+
+   font-size: 4.5rem;
+   font-weight: bold;
+   color: black;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
