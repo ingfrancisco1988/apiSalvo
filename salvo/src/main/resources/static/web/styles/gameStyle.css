@@ -1,3 +1,76 @@
+.form-dark .font-small {
+    font-size: 0.8rem; }
+
+.form-dark [type="radio"] + label,
+.form-dark [type="checkbox"] + label {
+    font-size: 0.8rem; }
+
+.form-dark [type="checkbox"] + label:before {
+    top: 2px;
+    width: 15px;
+    height: 15px; }
+
+.form-dark .md-form label {
+    color: #fff; }
+
+.form-dark input[type=email]:focus:not([readonly]) {
+    border-bottom: 1px solid #00C851;
+    -webkit-box-shadow: 0 1px 0 0 #00C851;
+    box-shadow: 0 1px 0 0 #00C851; }
+
+.form-dark input[type=email]:focus:not([readonly]) + label {
+    color: #fff; }
+
+.form-dark input[type=password]:focus:not([readonly]) {
+    border-bottom: 1px solid #00C851;
+    -webkit-box-shadow: 0 1px 0 0 #00C851;
+    box-shadow: 0 1px 0 0 #00C851; }
+
+.form-dark input[type=password]:focus:not([readonly]) + label {
+    color: #fff; }
+
+.form-dark input[type="checkbox"] + label:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    z-index: 0;
+    border: 1.5px solid #fff;
+    border-radius: 1px;
+    margin-top: 2px;
+    -webkit-transition: 0.2s;
+    transition: 0.2s; }
+
+.form-dark input[type="checkbox"]:checked + label:before {
+    top: -4px;
+    left: -3px;
+    width: 12px;
+    height: 22px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: transparent #00c851 #00c851 transparent;
+    -webkit-transform: rotate(40deg);
+    -ms-transform: rotate(40deg);
+    transform: rotate(40deg);
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    transform-origin: 100% 100%; }
+
+.form-dark .modal-header {
+    border-bottom: none;
+}
+
+/* aqui termina el modal  */
+
+
+
+
+
+
+
 
 #containerGames{
     width: 95%;
@@ -43,9 +116,9 @@ label {
     margin-right: 15px;
 }
 
-#signin {
+/*#signin {
     margin-left: 15px;
-}
+}*/
 
 #tablesHome {
     display: flex;
@@ -67,6 +140,20 @@ label {
 }
 
 .show {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 /*Estilo grid*/
@@ -218,43 +305,72 @@ h3 {
 /*Estilo drag and drop*/
 
 #aircraft {
-    width: 12.5rem;
+
+   /* width: 12.5rem;
     height: 2.5rem;
     background-color: forestgreen;
     border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 10px;*/
+   background-image: url("../img/aircraft.jpg");
+    background-size: 102%;
+    background-position-x: center;
+    /* text-align: center; */
+    background-position-y: center;
+    background-repeat: no-repeat;
+    width: 12.5rem;
+    height: 2.5rem;
+   /* width: 100%;*/
+    border-radius: 62px;
 }
+
+
 
 #battleship {
     width: 10rem;
     height: 2.5rem;
-    background-color: grey;
-    border: 2px solid black;
-    border-radius: 10px;
+    background-image: url("../img/battleship.jpg");
+    background-size: 102%;
+    background-position-x: center;
+    /* text-align: center; */
+    background-position-y: center;
+    background-repeat: no-repeat;
+    border-radius: 62px;
 }
 
 #destroyer {
     width: 7.5rem;
     height: 2.5rem;
-    background-color: darkgoldenrod;
-    border: 2px solid black;
-    border-radius: 10px;
+    background-image: url("../img/destroyer.jpg");
+    background-size: 102%;
+    background-position-x: center;
+    /* text-align: center; */
+    background-position-y: center;
+    background-repeat: no-repeat;
+    border-radius: 62px;
 }
 
 #submarine {
     width: 7.5rem;
     height: 2.5rem;
-    background-color: coral;
-    border: 2px solid black;
-    border-radius: 10px;
+    background-image: url("../img/submarine.jpg");
+    background-size: 102%;
+    background-position-x: center;
+    /* text-align: center; */
+    background-position-y: center;
+    background-repeat: no-repeat;
+    border-radius: 62px;
 }
 
 #patrolboat {
     width: 5rem;
     height: 2.5rem;
-    background-color: crimson;
-    border: 2px solid black;
-    border-radius: 10px;
+    background-image: url("../img/patrol.jpg");
+    background-size: 102%;
+    background-position-x: center;
+    /* text-align: center; */
+    background-position-y: center;
+    background-repeat: no-repeat;
+    border-radius: 62px;
 }
 
 [draggable] {
@@ -274,6 +390,7 @@ h3 {
     /*margin-top: 55px;*/
     display: flex;
     flex-direction: column;
+    width: 50%;
 }
 
 .aircraft, .battleship, .destroyer, .submarine, .patrolboat {
@@ -331,11 +448,14 @@ h3 {
 }
 
 #createShips {
-   margin-right: 65px;
+
+    height: 52px;
 }
 
 #createSalvo {
-   margin-left: 1050px;
+    position: absolute;
+    top: 22%;
+    left: 45%;
 }
 
 #createShips:hover, #createSalvo:hover {
@@ -351,6 +471,9 @@ h3 {
 }
 
 
+.cambio {
+    width: 25%;
+}
 
 
 

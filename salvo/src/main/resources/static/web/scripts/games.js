@@ -1,5 +1,5 @@
 
-$.getJSON("https://shipgamesalvo.herokuapp.com/api/games")
+$.getJSON("https://shipgamesalvo.herokuapp.com/api/games")//https://shipgamesalvo.herokuapp.com
     .done(function(json) {
         var data = json;
         console.log(data);
@@ -314,14 +314,14 @@ function loginInterface(name){
     // $('#logout, #newGame').show();
     // $('#login, #signin, #labelUsername, #username, #labelPassword, #password').hide();
 
-    document.getElementById('login').setAttribute('class', 'hide');
-    document.getElementById('signin').setAttribute('class', 'hide');
-    document.getElementById('signinMessage').setAttribute('class', 'hide');
-    document.getElementById('labelUsername').setAttribute('class', 'hide');
-    document.getElementById('username').setAttribute('class', 'hide');
-    document.getElementById('labelPassword').setAttribute('class', 'hide');
-    document.getElementById('password').setAttribute('class', 'hide');
-
+   // document.getElementById('login').setAttribute('class', 'hide');
+   // document.getElementById('sigin').setAttribute('class', 'hide');
+    //document.getElementById('signinMessage').setAttribute('class', 'hide');
+   // document.getElementById('labelUsername').setAttribute('class', 'hide');
+   // document.getElementById('username').setAttribute('class', 'hide');
+   // document.getElementById('labelPassword').setAttribute('class', 'hide');
+   // document.getElementById('password').setAttribute('class', 'hide');
+    document.getElementById('btnLogueo').setAttribute('class','hide');
     document.getElementById('logout').setAttribute('class', 'show');
     document.getElementById('newGame').setAttribute('class', 'show');
 
@@ -349,7 +349,7 @@ function login(){
         location.reload();
         console.log("estás login");
     }).fail(function(response){
-        alert("login incorrecto" + "Recuerda!! Debes estar registrado para poder accdeder al login");
+        alert("login incorrecto " + "Recuerda!!  Debes estar registrado para poder acceder al login");
         cleanInputs();
     })
 }
@@ -359,16 +359,17 @@ function login(){
 function logoutInterface(){
 
     $('[data-id]').hide();
+    document.getElementById('btnLogueo').setAttribute('class','show');
     document.getElementById('logout').setAttribute('class', 'hide');
     document.getElementById('currentUser').setAttribute('class', 'hide');
     document.getElementById('newGame').setAttribute('class', 'hide');
 
-    document.getElementById('login').setAttribute('class', 'show');
+ /*   document.getElementById('login').setAttribute('class', 'show' );
     document.getElementById('signin').setAttribute('class', 'show');
     document.getElementById('labelUsername').setAttribute('class', 'show');
     document.getElementById('username').setAttribute('class', 'show');
     document.getElementById('labelPassword').setAttribute('class', 'show');
-    document.getElementById('password').setAttribute('class', 'show');
+    document.getElementById('password').setAttribute('class', 'show');*/
 }
 
 function logout(){
@@ -385,7 +386,7 @@ function signin(){
     var password = document.getElementById("password");
 
     $.post("/api/players", { username: username.value, password: password.value }).done(function(){
-        alert("Enhorabuena!! Te has registrado con éxito");
+        alert("Enhora buena!! Te has registrado con éxito");
         login();
     }).fail(function(response){
         alert(response.responseJSON.error);
@@ -423,7 +424,7 @@ function clickButtons() {
 
     });
     $('#logout').click(logout);
-    $('#signin').click(signin);
+    $('#sigin').click(signin);
     $('#newGame').click(createNewGame);
     $('[data-id]').click(function(){
         var gpId = $(this).data('id');
