@@ -558,7 +558,7 @@ function getParameterByName(name) {
 
 function relatedUrl(locationData) {
 
-    return "http://localhost:8080/api/game_view/" + getParameterByName(locationData);
+    return "https://shipgamesalvo.herokuapp.com/api/game_view/" + getParameterByName(locationData);//https://shipgamesalvo.herokuapp.com
 }
 
 /*creacion del grid*/
