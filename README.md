@@ -2,4 +2,4 @@
 proyecto final
 Para Provar la funcionalidad del juego los invito la siguente Url
 Que gane el mejor.
-https://shipgamesalvo.herokuapp.com/web/games.html
+https://battleshipreborn.herokuapp.com.com/web/games.html
